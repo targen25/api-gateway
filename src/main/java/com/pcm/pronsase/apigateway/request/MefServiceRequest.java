@@ -21,7 +21,7 @@ public interface MefServiceRequest {
     @GetMapping("gasto")
     List<Object> getAllGasto();
 
-    @GetMapping("gastoDiarioPorAnioMes/{anoEje}/{mesEje}")
-    List<Object> getGastoDiarioPorAnioMes(@PathVariable Integer anoEje, @PathVariable Integer mesEje);
+    @GetMapping("gastoDiarioPorAnioMes/{anoEje}/{mesEje}/{page}/{size}")
+    List<Object> getGastoDiarioPorAnioMes(@PathVariable Integer anoEje, @PathVariable Integer mesEje,@PathVariable Integer page,@PathVariable Integer size);
 
 }

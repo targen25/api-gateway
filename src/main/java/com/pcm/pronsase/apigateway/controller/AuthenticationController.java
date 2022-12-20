@@ -27,12 +27,12 @@ public class AuthenticationController {
         {
             return new ResponseEntity<>(HttpStatus.CONFLICT);
         }
-/*
+
         if(userService.findByEmail(user.getEmail()).isPresent())
         {
             return new ResponseEntity<>(HttpStatus.CONFLICT);
         }
-*/
+
         return new ResponseEntity<>(userService.saveUser(user), HttpStatus.CREATED);
     }
 
